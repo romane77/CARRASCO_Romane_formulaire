@@ -1,0 +1,78 @@
+html,body {
+	margin: 0 ;
+	width: 100%;
+	height: 100%;
+	background: black;
+	font-family: 'Montserrat';
+}
+
+html{
+	overflow: hidden;
+}
+
+body{
+	width:200vw;
+	position: absolute;
+	transition: 1s;
+	left: 0px;
+}
+
+h1, h3, p {
+	color: white;
+}
+
+#nbrcaractere {
+	padding: 10px;
+	width: 600px;
+	border-radius : 15px;
+}
+
+#stylebouton {
+	width: 90px;
+	padding: 10px;
+	border-radius : 20px;	
+	background-color: #c2c1c1;
+	text-decoration: none;	
+	transition: 1s;
+	color: black;	
+} 
+
+#stylebout {
+	width: 110px;
+	padding: 15px;
+	border-radius : 25px;	
+	background-color: #8495f7;
+	text-decoration: none;	
+	color: black;		
+} 
+
+.page1 {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	float: left;
+}
+
+#alert {
+	margin:auto;
+	color: white;
+}
+
+#verif{	
+	background-color: white;
+	color: red;
+	transition: 1s;	
+}
+
+.page2{		
+	width:100vw;
+	height:100vh;
+	display: flex;
+	float: right;	
+}
+
+.box{
+	margin:auto;		
+}
+
+

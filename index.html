@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" href="style.css" _media="screen" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="page1">
+        <div class="box">
+           <center><h1> Entrez au minimum 14 caractères pour continuer : </h1> 
+            <h3> Vous ne pouvez entrer plus de 30 caractères</h3> 
+            <input type="text" id="nbrcaractere" placeholder="Entrez vos caractères" oninput="caractere()"> </br> </br>
+            <input onclick="animation()" type="submit" id="stylebouton" name="valider" a></br> 
+            <span id="alert"></span> </center>
+            <div id="verif"></div>
+        </div>
+    </div>
+
+    <div class="page2">
+        <p onclick="animation2()" name="valider" id="retour">Retour</p>        
+        <div class="box">
+                
+            <center>   <h1> Choisissez un sport ! </h1> </br>
+                       <a href="https://fr.wikipedia.org/wiki/Tennis" type="submit" id="stylebout" name="valider"> Tennis </a> 
+                       <a href="https://fr.wikipedia.org/wiki/Football" type="submit" id="stylebout" name="valider"> Football </a>
+                       <a href="https://fr.wikipedia.org/wiki/Natation" type="submit" id="stylebout" name="valider"> Natation </a>
+                       <a href="https://fr.wikipedia.org/wiki/Basket" type="submit" id="stylebout" name="valider"> Basket </a> </br> </br>                       
+            </center>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+
+    var text = 0;
+    var verif = document.getElementById('verif');
+
+    function caractere() {
+
+        text = document.getElementById('nbrcaractere').value.length; 
+        document.getElementById('alert').innerHTML = text + "/30";
+        verif.style.opacity = 0;  
+
+    }
+
+    function animation() {
+
+        if (text > 13 && text < 30) {
+            document.body.style.left = "-100%";            
+            
+        } else {
+            var nombre = 14 - text;
+            var faux = "Vous n'avez pas respecté le nombre de caractère. Écrivez encore " + nombre + " caractères.";
+            verif.innerHTML = faux;
+            verif.style.opacity = 1;
+        }
+    }
+
+    function animation2() {
+        document.body.style.left = "0%";  
+    }
+
+
+</script>
+</html>
